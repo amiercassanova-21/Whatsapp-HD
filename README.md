@@ -45,7 +45,7 @@ To work from the source repository, use Node.js 24 LTS and npm 12.2.0. Older npm
 
 ```sh
 pkg install git
-git clone https://github.com/DamnSit/Whatsapp-HD.git
+git clone https://github.com/amiercassanova-21/Whatsapp-HD.git
 cd Whatsapp-HD
 npm install -g npm@12.2.0
 npm ci
