@@ -27,3 +27,10 @@ The bundled Jimp 1.6.1 package manifests have their Zod dependency declarations
 aligned with the tested bundled Zod 4.6.7. Their code, licenses, author fields
 and copyright notices are preserved. This packaging change was made by
 XurXuo (DamnSit) on 2026-10-31.
+
+Modifications in the fork https://github.com/amiercassanova-21/Whatsapp-HD:
+- 2026-11-11, amiercassanova-21: Status uploads now wait for the WhatsApp
+  server acknowledgement of the sent message (src/server-ack.js,
+  src/status-publisher.js). An upload fails when the acknowledgement reports
+  an error or does not arrive within WA_ACK_TIMEOUT_MS (default 90 seconds),
+  instead of closing the connection immediately after sendMessage() returns.
