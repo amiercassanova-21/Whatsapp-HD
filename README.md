@@ -225,3 +225,5 @@ When distributing copies or modified versions, preserve the applicable original 
 If you choose AGPLv3 and modify the program, section 13 requires offering the corresponding source to users who interact with that modified version remotely over a network, when applicable. Users choosing GPLv3 are not subject to this additional AGPL requirement.
 
 This program is provided without warranty as set out in the chosen license.
+
+github awal → https://github.com/DamnSit/Whatsapp-HD
