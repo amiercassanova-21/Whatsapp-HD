@@ -185,6 +185,8 @@ Normal logs remain concise; `--trace` enables Baileys diagnostics. Traces can co
 
 **A successful `sendMessage()` return or Message ID is not proof of publication. Verify My Status and visibility with selected recipients.** Original source uploads and the normalized sender inclusion remain unchanged, but WhatsApp may process media server-side.
 
+**Fork change (2026-11-11):** after `sendMessage()` returns, the upload waits for WhatsApp's server acknowledgement of that Message ID before the CLI closes the connection. The upload fails if the acknowledgement reports an error or does not arrive within `WA_ACK_TIMEOUT_MS` milliseconds (default `90000`). Previously the CLI closed the connection right away, and some Statuses were never published although the upload reported success. See NOTICE.
+
 ## Troubleshooting
 
 - Picker command unavailable: install `termux-api` and the compatible Android companion, then retry. For a picker that does not open, check API integration, Android permissions, and app installation source. Q/Ctrl+C cancels the local action.
